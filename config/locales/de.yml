@@ -28,6 +28,9 @@ de:
 
     page: Seite
     pages: Seiten
+    admin:
+      tab:
+        pages: Seiten
     static_content:
       static_pages: Statische Seiten
       static_pages_desc: Verwaltung statischer Seiten mit einem WYSIWYG-Editor
