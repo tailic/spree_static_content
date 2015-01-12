@@ -10,6 +10,7 @@ class Spree::StaticContentController < Spree::StoreController
 
   private
     def determine_layout
+      return false if request.xhr?
       return @page.layout if @page and @page.layout.present? and not @page.render_layout_as_partial?
       Spree::Config.layout
     end
