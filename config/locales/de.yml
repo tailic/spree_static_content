@@ -10,6 +10,7 @@ de:
         show_in_sidebar: In der 'Sidebar' anzeigen
         show_in_header: Im 'Header' anzeigen
         show_in_footer: Im 'Footer' anzeigen
+        show_in: Zeige in
         position: Position
         visible: Sichtbar
         meta_keywords: Meta-Schlüsselwörter
