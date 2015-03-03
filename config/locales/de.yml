@@ -4,8 +4,15 @@ de:
     attributes:
       spree/page:
         body: Inhalt
-        foreign_link: "Externer Link (URL)"
         layout: Layout
+        foreign_link: Externer Link (URL)
+        show_in_sidebar: In der 'Sidebar' anzeigen
+        show_in_header: Im 'Header' anzeigen
+        show_in_footer: Im 'Footer' anzeigen
+        show_in: Zeige in
+        position: Position
+        visible: Sichtbar
+        meta_keywords: Meta-Schlüsselwörter
         meta_description: Meta-Beschreibung
         meta_keywords: Meta-Schlüsselwörter
         meta_title: Meta-Titel
