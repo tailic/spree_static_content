@@ -1,5 +1,8 @@
 class Spree::Page < ActiveRecord::Base
-  default_scope -> { order("position ASC") }
+  has_many :page_images, :as => :viewable, :dependent => :destroy, :class_name => 'Spree::PageImage'
+  accepts_nested_attributes_for :page_images, reject_if: :all_blank, allow_destroy: true
+
+  default_scope -> { order('position ASC') }
 
   validates_presence_of :title
   validates_presence_of [:slug, :body], :if => :not_using_foreign_link?
