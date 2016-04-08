@@ -6,7 +6,8 @@ class Spree::PageImage < Spree::Image
                         :list => '200x200>',
                         :small => '285x230>',
                         :normal => '425x500>',
-                        :large => '850x650>'
+                        :large => '850x650>',
+                        :original_optimized => ''
                     },
                     :default_style => :large,
                     :url => "/spree/page_images/:id/:style/:basename.:extension",
