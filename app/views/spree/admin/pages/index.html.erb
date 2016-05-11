@@ -7,6 +7,14 @@
 <% end %>
 
 <% if @pages.any? %>
+  <div id="pages">
+    <div class="alpha sixteen columns">
+      <div class="field">
+        <label>Suche:</label>
+        <input class="search" placeholder="Suchen" />
+      </div>
+    </div>
+
 <table class="index responsive" id="listing_pages" data-hook>
   <colgroup>
     <col style="width: 40%">
@@ -23,13 +31,13 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="list">
     <% @pages.each do |page| %>
       <tr data-hook="admin_pages_index_rows" class="<%= cycle('odd', 'even') %>" id="<%= dom_id page %>">
-        <td>
+        <td class="title">
           <%= page.title %>
         </td>
-        <td>
+        <td class="link">
           <%= link_to page.link, page.link, :target => '_blank' %>
         </td>
         <td class="align-center">
@@ -43,9 +51,17 @@
     <% end %>
   </tbody>
 </table>
+  </div>
 <% else %>
   <div class="alpha twelve columns no-objects-found">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/page')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_page_path %>!
   </div>
 <% end %>
+<script>
+  var options = {
+    valueNames: [ 'title', 'link' ]
+  };
+
+  var userList = new List('pages', options);
+</script>
