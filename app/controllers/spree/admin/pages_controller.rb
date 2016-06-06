@@ -9,7 +9,13 @@ class Spree::Admin::PagesController < Spree::Admin::ResourceController
       }
     end
   end
+
   private
+
+  def location_after_save
+    edit_admin_page_url(@object)
+  end
+
   def model_class
     Spree::Page
   end
